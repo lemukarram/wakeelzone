@@ -1,0 +1,43 @@
+# WakeelZone — Git Ignore
+
+# Dependency directories
+node_modules/
+
+# Build artifacts (commit compiled CSS separately if needed)
+# assets/css/tailwind.css
+
+# Environment / secrets
+.env
+*.env
+config/db.php
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PHP logs
+*.log
+error_log
+
+# Backups
+*.bak
+*.backup
+*.sql.bak
+
+# Temp files
+tmp/
+temp/
+cache/
+
+# Old/unused files
+config/config.php
+database/
+gemini.md
+README.md

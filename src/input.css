@@ -1,0 +1,11 @@
+/* WakeelZone — Tailwind Source
+   For production build: npm run build
+   Output → assets/css/tailwind.css
+   Import both variables.css + tailwind.css in head.php for production
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import design system */
+@import '../assets/css/variables.css';
