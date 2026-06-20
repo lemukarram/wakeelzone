@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wakeelzone.com/sitemap.xml
+
+# Disallow sensitive paths
+Disallow: /process_contact.php
+Disallow: /config/
+Disallow: /database/
+Disallow: /config.php
+Disallow: /*.env$
+Disallow: /*.sql$
+Disallow: /*.log$

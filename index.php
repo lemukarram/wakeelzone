@@ -334,8 +334,21 @@ include 'includes/nav.php';
       <h2 class="heading-2">Lawyers Across Pakistan</h2>
     </div>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.625rem;" class="reveal d-1">
-      <?php foreach ($cities as $city): ?>
-        <a href="contact.php?city=<?php echo urlencode($city); ?>"
+      <?php
+      $city_pages = [
+        'Karachi'    => 'advocate-lawyer-karachi.php',
+        'Lahore'     => 'advocate-lawyer-lahore.php',
+        'Islamabad'  => 'advocate-lawyer-islamabad.php',
+        'Rawalpindi' => 'advocate-lawyer-rawalpindi.php',
+        'Peshawar'   => 'advocate-lawyer-peshawar.php',
+        'Quetta'     => 'advocate-lawyer-quetta.php',
+        'Faisalabad' => 'advocate-lawyer-faisalabad.php',
+        'Multan'     => 'advocate-lawyer-multan.php',
+      ];
+      foreach ($cities as $city):
+        $href = isset($city_pages[$city]) ? $city_pages[$city] : 'contact.php?city=' . urlencode($city);
+      ?>
+        <a href="<?php echo $href; ?>"
            class="badge badge-navy"
            style="font-size:0.8125rem;padding:0.4rem 1rem;cursor:pointer;transition:all var(--ease-spring);"
            onmouseover="this.classList.add('badge-gold');this.classList.remove('badge-navy')"
@@ -352,6 +365,52 @@ include 'includes/nav.php';
 </section>
 
 <!-- ════════════════════════════════════════════════
+     FIND BY SPECIALTY
+════════════════════════════════════════════════ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-header center reveal" style="margin-bottom:2rem;">
+      <span class="section-label"><i class="ph ph-magnifying-glass"></i> Find by Specialty</span>
+      <h2 class="heading-2">Specialized Legal Services</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;" class="spec-idx-grid reveal d-1">
+      <a href="high-court-lawyers.php" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 1rem;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);text-decoration:none;transition:all var(--ease-spring);" class="spec-idx-card">
+        <div style="width:52px;height:52px;background:var(--clr-primary-50);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin-bottom:0.875rem;">
+          <i class="ph ph-bank" style="font-size:1.5rem;color:var(--clr-primary);"></i>
+        </div>
+        <h4 style="font-size:var(--text-sm);font-weight:700;color:var(--clr-text);margin-bottom:0.25rem;">High Court Lawyers</h4>
+        <p style="font-size:var(--text-xs);color:var(--clr-text-muted);">All 5 Pakistani High Courts</p>
+      </a>
+      <a href="supreme-court-lawyers.php" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 1rem;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);text-decoration:none;transition:all var(--ease-spring);" class="spec-idx-card">
+        <div style="width:52px;height:52px;background:var(--clr-gold-50);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin-bottom:0.875rem;">
+          <i class="ph ph-scales" style="font-size:1.5rem;color:var(--clr-primary);"></i>
+        </div>
+        <h4 style="font-size:var(--text-sm);font-weight:700;color:var(--clr-text);margin-bottom:0.25rem;">Supreme Court</h4>
+        <p style="font-size:var(--text-xs);color:var(--clr-text-muted);">Pakistan's apex court advocates</p>
+      </a>
+      <a href="female-lawyers.php" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 1rem;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);text-decoration:none;transition:all var(--ease-spring);" class="spec-idx-card">
+        <div style="width:52px;height:52px;background:var(--clr-primary-50);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin-bottom:0.875rem;">
+          <i class="ph ph-gender-female" style="font-size:1.5rem;color:var(--clr-primary);"></i>
+        </div>
+        <h4 style="font-size:var(--text-sm);font-weight:700;color:var(--clr-text);margin-bottom:0.25rem;">Female Lawyers</h4>
+        <p style="font-size:var(--text-xs);color:var(--clr-text-muted);">Women advocates for sensitive matters</p>
+      </a>
+      <a href="all-lawyers.php" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 1rem;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);text-decoration:none;transition:all var(--ease-spring);" class="spec-idx-card">
+        <div style="width:52px;height:52px;background:var(--clr-gold-50);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin-bottom:0.875rem;">
+          <i class="ph ph-users-three" style="font-size:1.5rem;color:var(--clr-primary);"></i>
+        </div>
+        <h4 style="font-size:var(--text-sm);font-weight:700;color:var(--clr-text);margin-bottom:0.25rem;">All Lawyers</h4>
+        <p style="font-size:var(--text-xs);color:var(--clr-text-muted);">Browse our full network</p>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+.spec-idx-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--clr-primary-100); }
+@media(max-width:639px){ .spec-idx-grid{ grid-template-columns:1fr 1fr !important; } }
+</style>
+
+<!-- ════════════════════════════════════════════════
      FAQ
 ════════════════════════════════════════════════ -->
 <section class="section bg-surface-2" id="faq" aria-label="Frequently asked questions">
@@ -364,7 +423,7 @@ include 'includes/nav.php';
     </div>
 
     <div class="faq-list reveal d-1">
-      <?php foreach ($faqs as $i => $faq): ?>
+      <?php foreach (array_slice($faqs, 0, 6) as $i => $faq): ?>
       <div class="faq-item <?php echo $i === 0 ? 'open' : ''; ?>"
            itemscope itemtype="https://schema.org/Question">
         <button class="faq-question" aria-expanded="<?php echo $i === 0 ? 'true' : 'false'; ?>">
@@ -380,6 +439,11 @@ include 'includes/nav.php';
         </div>
       </div>
       <?php endforeach; ?>
+    </div>
+    <div style="text-align:center;margin-top:2rem;" class="reveal d-2">
+      <a href="faq.php" class="btn btn-outline">
+        <i class="ph ph-question"></i> View All 17 FAQs
+      </a>
     </div>
   </div>
 </section>

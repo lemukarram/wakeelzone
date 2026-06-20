@@ -171,6 +171,7 @@ include 'includes/nav.php';
               <p style="font-size:var(--text-xs);color:var(--clr-text-3);margin:0;line-height:1.5;">
                 By submitting this form, you confirm that all information is accurate and you consent
                 to WakeelZone verifying your credentials with the Pakistan Bar Council / Provincial Bar Councils.
+                Please read our <a href="lawyer-terms.php" target="_blank" style="color:var(--clr-primary);font-weight:600;">Lawyer Terms &amp; Conditions</a> before registering.
               </p>
             </div>
 

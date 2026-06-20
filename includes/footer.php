@@ -48,11 +48,16 @@ $footer_services = array_slice($services, 0, 9);
           <a href="about.php"               class="footer-link"><i class="ph ph-caret-right"></i> About Us</a>
           <a href="services.php"            class="footer-link"><i class="ph ph-caret-right"></i> Legal Services</a>
           <a href="how-we-work.php"         class="footer-link"><i class="ph ph-caret-right"></i> How We Work</a>
+          <a href="all-lawyers.php"         class="footer-link"><i class="ph ph-caret-right"></i> Find a Lawyer</a>
+          <a href="high-court-lawyers.php"  class="footer-link"><i class="ph ph-caret-right"></i> High Court Lawyers</a>
+          <a href="female-lawyers.php"      class="footer-link"><i class="ph ph-caret-right"></i> Female Lawyers</a>
           <a href="blog.php"                class="footer-link"><i class="ph ph-caret-right"></i> Legal Guide</a>
+          <a href="faq.php"                 class="footer-link"><i class="ph ph-caret-right"></i> FAQs</a>
           <a href="lawyer-registration.php" class="footer-link"><i class="ph ph-caret-right"></i> Register as Lawyer</a>
           <a href="contact.php"             class="footer-link"><i class="ph ph-caret-right"></i> Contact Us</a>
           <a href="privacy-policy.php"      class="footer-link"><i class="ph ph-caret-right"></i> Privacy Policy</a>
           <a href="terms.php"               class="footer-link"><i class="ph ph-caret-right"></i> Terms & Conditions</a>
+          <a href="sitemap.php"             class="footer-link"><i class="ph ph-caret-right"></i> Sitemap</a>
         </nav>
       </div>
 
@@ -129,6 +134,30 @@ $footer_services = array_slice($services, 0, 9);
     </div><!-- /footer-grid -->
   </div><!-- /container -->
 
+  <!-- City Pages Strip -->
+  <div style="border-top: 1px solid rgba(255,255,255,0.06); padding: 1.25rem 0;">
+    <div class="container">
+      <p style="font-size:0.6875rem;font-weight:600;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.625rem;">Lawyers by City</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
+        <a href="advocate-lawyer-karachi.php"    style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Karachi</a>
+        <a href="advocate-lawyer-lahore.php"     style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Lahore</a>
+        <a href="advocate-lawyer-islamabad.php"  style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Islamabad</a>
+        <a href="advocate-lawyer-rawalpindi.php" style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Rawalpindi</a>
+        <a href="advocate-lawyer-peshawar.php"   style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Peshawar</a>
+        <a href="advocate-lawyer-quetta.php"     style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Quetta</a>
+        <a href="advocate-lawyer-faisalabad.php" style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Faisalabad</a>
+        <a href="advocate-lawyer-multan.php"     style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Multan</a>
+        <a href="high-court-lawyer-lahore.php"   style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Lahore HC</a>
+        <a href="high-court-lawyer-sindh.php"    style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Sindh HC</a>
+        <a href="high-court-lawyer-islamabad.php" style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Islamabad HC</a>
+        <a href="high-court-lawyer-peshawar.php" style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Peshawar HC</a>
+        <a href="high-court-lawyer-balochistan.php" style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Balochistan HC</a>
+        <a href="supreme-court-lawyers.php"      style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Supreme Court</a>
+        <a href="female-lawyers.php"             style="font-size:0.6875rem;color:rgba(255,255,255,0.3);text-decoration:none;padding:0.2rem 0.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);">Female Lawyers</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Divider -->
   <div class="footer-hr"></div>
 
@@ -139,6 +168,8 @@ $footer_services = array_slice($services, 0, 9);
       <div class="footer-bottom-links">
         <a href="privacy-policy.php" class="footer-bottom-link">Privacy Policy</a>
         <a href="terms.php"          class="footer-bottom-link">Terms of Service</a>
+        <a href="lawyer-terms.php"   class="footer-bottom-link">Lawyer Terms</a>
+        <a href="sitemap.php"        class="footer-bottom-link">Sitemap</a>
         <a href="contact.php"        class="footer-bottom-link">Contact Us</a>
       </div>
     </div>

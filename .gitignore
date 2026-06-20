@@ -40,4 +40,6 @@ cache/
 config/config.php
 database/
 gemini.md
-README.md
+
+# Private — never push
+DEPLOY.md

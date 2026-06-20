@@ -48,6 +48,9 @@ $current_file = basename($_SERVER['PHP_SELF']);
           <a href="how-we-work.php" class="nav-link <?php echo $current_file === 'how-we-work.php' ? 'active' : ''; ?>">How We Work</a>
         </li>
         <li>
+          <a href="all-lawyers.php" class="nav-link <?php echo $current_file === 'all-lawyers.php' ? 'active' : ''; ?>">Find a Lawyer</a>
+        </li>
+        <li>
           <a href="blog.php" class="nav-link <?php echo $current_file === 'blog.php' ? 'active' : ''; ?>">Legal Guide</a>
         </li>
         <li>
@@ -106,8 +109,14 @@ $current_file = basename($_SERVER['PHP_SELF']);
   <a href="how-we-work.php" class="mobile-nav-link <?php echo $current_file === 'how-we-work.php' ? 'active' : ''; ?>">
     <i class="ph ph-steps"></i> How We Work
   </a>
+  <a href="all-lawyers.php" class="mobile-nav-link <?php echo $current_file === 'all-lawyers.php' ? 'active' : ''; ?>">
+    <i class="ph ph-users-three"></i> Find a Lawyer
+  </a>
   <a href="blog.php" class="mobile-nav-link <?php echo $current_file === 'blog.php' ? 'active' : ''; ?>">
     <i class="ph ph-book-open"></i> Legal Guide
+  </a>
+  <a href="faq.php" class="mobile-nav-link <?php echo $current_file === 'faq.php' ? 'active' : ''; ?>">
+    <i class="ph ph-question"></i> FAQs
   </a>
   <a href="lawyer-registration.php" class="mobile-nav-link <?php echo $current_file === 'lawyer-registration.php' ? 'active' : ''; ?>">
     <i class="ph ph-identification-badge"></i> Register as Lawyer

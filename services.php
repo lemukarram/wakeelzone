@@ -63,6 +63,33 @@ include 'includes/nav.php';
   </div>
 </section>
 
+<!-- ════════ SPECIALTY PAGES ════════ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label"><i class="ph ph-star"></i> Specialized Services</span>
+      <h2 class="heading-2">Find the Right Expert</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin-inline:auto;" class="spec-grid reveal d-1">
+      <a href="high-court-lawyers.php" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem;background:var(--clr-primary-50);border:1px solid rgba(27,58,107,0.12);border-radius:var(--radius-lg);text-decoration:none;transition:all var(--ease-spring);" class="spec-card">
+        <i class="ph ph-bank" style="font-size:2rem;color:var(--clr-primary);margin-bottom:0.75rem;"></i>
+        <h4 style="font-size:var(--text-sm);font-weight:700;color:var(--clr-primary);margin-bottom:0.25rem;">High Court Lawyers</h4>
+        <p style="font-size:var(--text-xs);color:var(--clr-text-muted);">All 5 High Courts covered</p>
+      </a>
+      <a href="supreme-court-lawyers.php" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem;background:var(--clr-gold-50);border:1px solid rgba(201,168,76,0.2);border-radius:var(--radius-lg);text-decoration:none;transition:all var(--ease-spring);" class="spec-card">
+        <i class="ph ph-scales" style="font-size:2rem;color:var(--clr-primary);margin-bottom:0.75rem;"></i>
+        <h4 style="font-size:var(--text-sm);font-weight:700;color:var(--clr-primary);margin-bottom:0.25rem;">Supreme Court</h4>
+        <p style="font-size:var(--text-xs);color:var(--clr-text-muted);">Apex court advocates</p>
+      </a>
+      <a href="female-lawyers.php" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem;background:var(--clr-primary-50);border:1px solid rgba(27,58,107,0.12);border-radius:var(--radius-lg);text-decoration:none;transition:all var(--ease-spring);" class="spec-card">
+        <i class="ph ph-gender-female" style="font-size:2rem;color:var(--clr-primary);margin-bottom:0.75rem;"></i>
+        <h4 style="font-size:var(--text-sm);font-weight:700;color:var(--clr-primary);margin-bottom:0.25rem;">Female Lawyers</h4>
+        <p style="font-size:var(--text-xs);color:var(--clr-text-muted);">Women advocates network</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ════════ COURTS COVERED ════════ -->
 <section class="section-sm bg-surface-2">
   <div class="container">
@@ -71,14 +98,31 @@ include 'includes/nav.php';
       <h2 class="heading-2">Courts & Tribunals We Cover</h2>
     </div>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;" class="reveal d-1">
-      <?php foreach ($courts as $court): ?>
-      <span class="badge badge-navy" style="font-size:0.8125rem;padding:0.5rem 1.125rem;">
+      <?php
+      $court_links = [
+        'Supreme Court of Pakistan' => 'supreme-court-lawyers.php',
+        'Lahore High Court'         => 'high-court-lawyer-lahore.php',
+        'Sindh High Court'          => 'high-court-lawyer-sindh.php',
+        'Peshawar High Court'       => 'high-court-lawyer-peshawar.php',
+        'Balochistan High Court'    => 'high-court-lawyer-balochistan.php',
+        'Islamabad High Court'      => 'high-court-lawyer-islamabad.php',
+      ];
+      foreach ($courts as $court):
+        $href = isset($court_links[$court]) ? $court_links[$court] : '#';
+        $tag  = ($href !== '#') ? 'a' : 'span';
+      ?>
+      <<?php echo $tag; ?> <?php if ($href !== '#'): ?>href="<?php echo $href; ?>"<?php endif; ?> class="badge badge-navy" style="font-size:0.8125rem;padding:0.5rem 1.125rem;<?php if ($href !== '#'): ?>text-decoration:none;<?php endif; ?>">
         <i class="ph ph-scales"></i> <?php echo htmlspecialchars($court); ?>
-      </span>
+      </<?php echo $tag; ?>>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
+
+<style>
+.spec-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-navy); }
+@media (max-width: 639px) { .spec-grid { grid-template-columns: 1fr !important; } }
+</style>
 
 <!-- ════════ CTA ════════ -->
 <section class="cta-section">

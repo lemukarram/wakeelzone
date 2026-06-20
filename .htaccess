@@ -4,6 +4,9 @@
 Options -Indexes
 ServerSignature Off
 
+# Ensure PHP takes priority over the old placeholder index.html
+DirectoryIndex index.php index.html
+
 # ── PHP Settings ────────────────────────────────────
 <IfModule mod_php8.c>
     php_value upload_max_filesize 10M
@@ -44,6 +47,9 @@ ServerSignature Off
     # RewriteCond %{HTTPS} off
     # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+    # XML Sitemap
+    RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
+
     # Remove .php extension
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -51,7 +57,7 @@ ServerSignature Off
     RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
     # 404 handling
-    ErrorDocument 404 /index.php
+    ErrorDocument 404 /404.php
 </IfModule>
 
 # ── Gzip Compression ─────────────────────────────────
