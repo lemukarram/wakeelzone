@@ -51,12 +51,12 @@ $page_desc    = isset($pageDesc) ? $pageDesc : "Pakistan's premier anonymous leg
   </script>
 
   <!-- CSS Variables (theme control) -->
-  <link rel="stylesheet" href="<?php echo ($current_file === 'index.php' || !isset($_SERVER['PATH_INFO'])) ? '' : ''; ?>assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/variables.css?v=2.1">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
 
   <!-- Preload hint -->
-  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/css/style.css?v=2.1" as="style">
 </head>
 <body>
