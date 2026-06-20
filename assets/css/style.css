@@ -196,6 +196,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   70%  { box-shadow: var(--shadow-gold), 0 0 0 14px rgba(201,168,76,0); }
   100% { box-shadow: var(--shadow-gold), 0 0 0 0 rgba(201,168,76,0); }
 }
+/* Mobile nav call button — hide number, show "Call Now", tighter padding */
+.nav-call-text { display: none; }
+@media (max-width: 767px) {
+  #navCallBtn { padding-left: 0.5rem; padding-right: 0.5rem; }
+  .nav-call-number { display: none; }
+  .nav-call-text   { display: inline; }
+}
 
 /* ─────────────────────────────────────────────────────────────
    NAVBAR

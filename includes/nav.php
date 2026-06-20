@@ -61,13 +61,14 @@ $current_file = basename($_SERVER['PHP_SELF']);
         </li>
       </ul>
 
-      <!-- Desktop CTA -->
+      <!-- Nav CTA -->
       <a href="tel:<?php echo preg_replace('/\s+/', '', HELPLINE_NUMBER); ?>"
          class="btn btn-call"
          style="flex-shrink:0; display:none;"
          id="navCallBtn">
         <i class="ph ph-phone-call"></i>
-        <?php echo HELPLINE_NUMBER; ?>
+        <span class="nav-call-number"><?php echo HELPLINE_NUMBER; ?></span>
+        <span class="nav-call-text">Call Now</span>
       </a>
 
       <!-- Hamburger -->
